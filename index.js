@@ -7,7 +7,8 @@ const tBodyEl = document.querySelector('tbody');
 const messageEl = document.querySelector('.message');
 const form = document.querySelector('form');
 
-const table = function () {
+const table = function (e) {
+  e.preventDefault();
   const trEl = document.createElement('tr');
   const tdNameEl = document.createElement('td');
   const tdEmailEl = document.createElement('td');
