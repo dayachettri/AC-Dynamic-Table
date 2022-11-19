@@ -3,12 +3,11 @@ const numberInputEl = document.querySelector('.number');
 const emailInputEl = document.querySelector('.email');
 const submitInputEl = document.querySelector('.submit');
 const tBodyEl = document.querySelector('tbody');
-const bodyEl = document.querySelector('body');
+// const bodyEl = document.querySelector('body');
 const messageEl = document.querySelector('.message');
 const form = document.querySelector('form');
 
 const table = function () {
-  // Create tr with td
   const trEl = document.createElement('tr');
   const tdNameEl = document.createElement('td');
   const tdEmailEl = document.createElement('td');
@@ -35,7 +34,7 @@ const table = function () {
     tBodyEl.append(trEl);
     trEl.append(tdNameEl, tdEmailEl, tdNumberEl, btnDelete);
     messageEl.style.color = '#222';
-    messageEl.textContent = `ADDED INFORMATION`;
+    messageEl.textContent = 'ADDED A CONTACT';
   } else {
     messageEl.style.color = '#222';
     messageEl.textContent = 'INVALID INPUT';
@@ -49,7 +48,7 @@ const table = function () {
     let target = e.target;
     target.parentNode.remove();
     messageEl.style.color = '#222';
-    messageEl.textContent = `DELETED INFORMATION`;
+    messageEl.textContent = 'REMOVED A CONTACT';
   });
   form.reset();
 };
